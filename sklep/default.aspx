@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <link href="css/Custome.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -51,7 +52,8 @@
                                     <li><a href="#">Tajne 2</a> </li>
                                 </ul>
                             </li>
-                            <li ><a href="#">Registration</a></li>
+                            <li ><a href="SignUp.aspx">SignUp</a></li>
+                            <li ><a href="SignIn.aspx">SignIn</a></li>
                         </ul>
 
 
@@ -117,7 +119,8 @@
 
         </div>
         <!---Middle Contents start--->
-        <div class="container">
+        <hr />
+        <div class="container center">
             <div class="row">
                 <div class="col-lg-4">
                     <img class="img-circle" src="mobile/phones.jfif" alt="thumb" width="140" height="140" />
@@ -148,6 +151,23 @@
 
         <!---Middle Contents end--->
 
+
+        <!---Footer start here--->
+        <footer>
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy;2020Konrad M &middot; <a href="Default.aspx">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a>   </p>
+
+
+            </div>
+
+
+        </footer>
+
+
+
+
+        <!---Footer end here--->
 
     </form>
 
