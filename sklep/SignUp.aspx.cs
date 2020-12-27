@@ -33,8 +33,9 @@ namespace sklep
                     con.Close();
                     lblMsg.Text = "Registration Successfully done";
                     lblMsg.ForeColor = System.Drawing.Color.Green;
-
+                   
                 }
+                Response.Redirect("~/SignIn.aspx");
             }
             else
             {

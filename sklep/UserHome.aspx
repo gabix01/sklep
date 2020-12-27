@@ -1,10 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="sklep.SignUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserHome.aspx.cs" Inherits="sklep.UserHome" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>User Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <link href="css/Custome.css" rel="stylesheet" />
@@ -12,7 +14,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <title>Sign Up</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -52,8 +53,7 @@
                                     <li><a href="#">Tajne 2</a> </li>
                                 </ul>
                             </li>
-                                <li class="active" ><a href="SignUp.aspx">SignUp</a></li>
-                            <li ><a href="SignIn.aspx">SignIn</a></li>
+                            <asp:Button ID="Btnlogout" CssClass="btn btn-default navbar-btn" runat="server" Text="Sign out" />
                         </ul>
 
 
@@ -61,43 +61,12 @@
                     </div>
                 </div>
         </div>
-        <!----Signup Start -->
-            <div class="center-page">
 
-                <label class="col-xs-11">UserName:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtUname" runat="server" CssClass="form-control" placeholder="Enter Your UserName"></asp:TextBox>
-                </div>
+        <br />
+        <br />
+         <br />
 
-                <label class="col-xs-11">Password:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" placeholder="Enter Your Password" TextMode="Password"></asp:TextBox>
-                </div>
-            
-                <label class="col-xs-11">Confirm Password:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtCPass" runat="server" CssClass="form-control" placeholder="Enter Your Confirm Password" TextMode="Password"></asp:TextBox>
-                </div>
-
-                <label class="col-xs-11">Full Name:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter Your Name"></asp:TextBox>
-                </div>
-
-                <label class="col-xs-11">E-mail:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Your E-mail"></asp:TextBox>
-                </div>
-            <label class="col-xs-11"></label>
-             <div class="col-xs-11">
-                 <asp:Button ID="txtsignup" CssClass="btn btn-success" runat="server" Text="SignUP" OnClick="txtsignup_Click"  />
-                 <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
-                </div>
-            </div>
-
-
-        <!----Sign up end -->
-
+        <asp:Label ID="lblSuccess" runat="server" CssClass="text-success"></asp:Label>
 
          <!---Footer start here--->
         <footer class="footer-pos">
@@ -115,6 +84,7 @@
 
 
         <!---Footer end here--->
+
     </form>
 </body>
 </html>

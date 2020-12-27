@@ -1,21 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="sklep.SignUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="sklep.SignIn" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
+      <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <link href="css/Custome.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <title>Sign Up</title>
+    <title>SignIn</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+   <form id="form1" runat="server">
         <div>
             <div class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
@@ -52,8 +51,8 @@
                                     <li><a href="#">Tajne 2</a> </li>
                                 </ul>
                             </li>
-                                <li class="active" ><a href="SignUp.aspx">SignUp</a></li>
-                            <li ><a href="SignIn.aspx">SignIn</a></li>
+                                <li  ><a href="SignUp.aspx">SignUp</a></li>
+                            <li class="active" ><a href="SignIn.aspx">SignIn</a></li>
                         </ul>
 
 
@@ -61,45 +60,70 @@
                     </div>
                 </div>
         </div>
-        <!----Signup Start -->
-            <div class="center-page">
 
-                <label class="col-xs-11">UserName:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtUname" runat="server" CssClass="form-control" placeholder="Enter Your UserName"></asp:TextBox>
-                </div>
+               <br />
+        <br />
+        <br />
+         <!----Signin Start -->
+       <div class="container">
+           <div class="form-horizontal">
+               <h2>Login Form</h2>
+               <hr />
+            <div class="form-group">
+                <asp:Label ID="Label1" CssClass="col-md-2 control-label" runat="server" Text="UserName" ></asp:Label>
+                <div class="col-md-3">
 
-                <label class="col-xs-11">Password:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" placeholder="Enter Your Password" TextMode="Password"></asp:TextBox>
-                </div>
-            
-                <label class="col-xs-11">Confirm Password:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtCPass" runat="server" CssClass="form-control" placeholder="Enter Your Confirm Password" TextMode="Password"></asp:TextBox>
-                </div>
-
-                <label class="col-xs-11">Full Name:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter Your Name"></asp:TextBox>
-                </div>
-
-                <label class="col-xs-11">E-mail:</label>
-                <div class="col-xs-11">
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Your E-mail"></asp:TextBox>
-                </div>
-            <label class="col-xs-11"></label>
-             <div class="col-xs-11">
-                 <asp:Button ID="txtsignup" CssClass="btn btn-success" runat="server" Text="SignUP" OnClick="txtsignup_Click"  />
-                 <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+                    <asp:TextBox ID="txtUsername" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" CssClass="text-danger" runat="server" ErrorMessage="plz Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
             </div>
+               <div class="form-horizontal">
+            <div class="form-group">
+                <asp:Label ID="Label2" CssClass="col-md-2 control-label" runat="server" Text="Password" ></asp:Label>
+                <div class="col-md-3">
 
+                    <asp:TextBox ID="txtPassword" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger" runat="server" ErrorMessage="plz Enter valid Password" ControlToValidate="txtPassword" ForeColor="Red"></asp:RequiredFieldValidator>
+                </div>
+            </div>
+                   <div class="form-horizontal">
+            <div class="form-group">
+                <div  class="col-md-2"></div>
+                <div class="col-md-6">
 
-        <!----Sign up end -->
+                    <asp:CheckBox ID="CheckBox1" runat="server" />
+                     <asp:Label ID="Label3" CssClass="control-label" runat="server" Text="Remember me" ></asp:Label>
+                </div>
+            </div>
+                       
+            <div class="form-group">
+                <div  class="col-md-2"></div>
+                <div class="col-md-6">
 
+                    <asp:Button ID="btnLogin" CssClass ="btn btn-success " runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/SignUp.aspx">Sign Up</asp:HyperLink>
+            </div>
+           </div>
 
-         <!---Footer start here--->
+                         <div class="form-group">
+                <div  class="col-md-2"></div>
+                <div class="col-md-6">     
+
+                    <asp:Label ID="lblError" CssClass="text-danger" runat="server"></asp:Label>
+                </div>
+
+           </div>
+           </div>
+
+           </div>
+           </div>
+
+       </div>
+
+       
+        <!----Signin end -->
+
+        <!---Footer start here--->
         <footer class="footer-pos">
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>
@@ -115,6 +139,7 @@
 
 
         <!---Footer end here--->
+
     </form>
 </body>
 </html>
